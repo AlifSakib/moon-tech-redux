@@ -14,11 +14,19 @@ const Home = () => {
   const state = useSelector((state) => state);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl gap-14 mx-auto my-10">
-      {products.map((product) => (
-        <ProductCard product={product} key={product._id}></ProductCard>
-      ))}
-    </div>
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl gap-14 mx-auto my-10">
+        {products.map((product) => (
+          <ProductCard product={product} key={product._id}></ProductCard>
+        ))}
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl gap-14 mx-auto my-10">
+        {products.map((product) => (
+          <ProductCard product={product} key={product._id}></ProductCard>
+        ))}
+      </div>
+      {/* <ScrollToTopButton /> */}
+    </>
   );
 };
 
